@@ -1,0 +1,9 @@
+.logo {
+    width: 400px;
+    margin-right: auto; /* Esto asegura que el logo se quede en el lugar original */
+  }
+
+  a {
+    cursor: pointer;
+  }
+  
