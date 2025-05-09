@@ -13,175 +13,22 @@
                                 <h3>NUESTROS ALIADOS</h3>
                             </div>
                             <div class="row">
-                                <div class="col-lg-4 col-md-6 col-sm-12 pb-2">
-                                    <div class="team-item bg-white mb-4 conteriner-noticia">
+                                <div class="col-lg-4 col-md-6 col-sm-12 pb-2" *ngFor="let entidad of entidades">
+                                    <div class="team-item bg-white mb-4 conteriner-noticia" >
                                         <div class="team-img position-relative overflow-hidden">
-                                            <img class="img-fluid w-100" src="../../../assets/img/img3.jpg" alt="">
+                                            <!-- <img class="img-fluid w-100" src="../../../assets/img/img3.jpg" alt=""> -->
+                                            <img [src]="getImageUrlEntidad(entidad.portada)" class="img-fluid w-100" alt="...">
                                             <div class="team-social">
 
                                             </div>
                                         </div>
                                         <div class="text-center py-4 p-2">
-                                            <a (click)="redirectToDetalleRepositorio()"><h6 class="text-wrap">NOMBRE DE LA ENTIDAD ALIADA</h6></a>
+                                            <a (click)="redirectToDetalleRepositorio(entidad.id_entidad_aliada)"><h6 class="text-wrap">{{ entidad.nombre }}</h6></a>
                                             
                                         </div>
                                     </div>
                                 </div>
-                                
-                                <div class="col-lg-4 col-md-6 col-sm-12 pb-2">
-                                    <div class="team-item bg-white mb-4 conteriner-noticia">
-                                        <div class="team-img position-relative overflow-hidden">
-                                            <img class="img-fluid w-100" src="../../../assets/img/img3.jpg" alt="">
-                                            <div class="team-social">
 
-                                            </div>
-                                        </div>
-                                        <div class="text-center py-4 p-2">
-                                            <a (click)="redirectToDetalleRepositorio()"><h6 class="text-wrap">NOMBRE DE LA ENTIDAD ALIADA</h6></a>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12 pb-2">
-                                    <div class="team-item bg-white mb-4 conteriner-noticia">
-                                        <div class="team-img position-relative overflow-hidden">
-                                            <img class="img-fluid w-100" src="../../../assets/img/img3.jpg" alt="">
-                                            <div class="team-social">
-
-                                            </div>
-                                        </div>
-                                        <div class="text-center py-4 p-2">
-                                            <a (click)="redirectToDetalleRepositorio()"><h6 class="text-wrap">NOMBRE DE LA ENTIDAD ALIADA</h6></a>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12 pb-2">
-                                    <div class="team-item bg-white mb-4 conteriner-noticia">
-                                        <div class="team-img position-relative overflow-hidden">
-                                            <img class="img-fluid w-100" src="../../../assets/img/img3.jpg" alt="">
-                                            <div class="team-social">
-
-                                            </div>
-                                        </div>
-                                        <div class="text-center py-4 p-2">
-                                            <a (click)="redirectToDetalleRepositorio()"><h6 class="text-wrap">NOMBRE DE LA ENTIDAD ALIADA</h6></a>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12 pb-2">
-                                    <div class="team-item bg-white mb-4 conteriner-noticia">
-                                        <div class="team-img position-relative overflow-hidden">
-                                            <img class="img-fluid w-100" src="../../../assets/img/img3.jpg" alt="">
-                                            <div class="team-social">
-
-                                            </div>
-                                        </div>
-                                        <div class="text-center py-4 p-2">
-                                            <a (click)="redirectToDetalleRepositorio()"><h6 class="text-wrap">NOMBRE DE LA ENTIDAD ALIADA</h6></a>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12 pb-2">
-                                    <div class="team-item bg-white mb-4 conteriner-noticia">
-                                        <div class="team-img position-relative overflow-hidden">
-                                            <img class="img-fluid w-100" src="../../../assets/img/img3.jpg" alt="">
-                                            <div class="team-social">
-
-                                            </div>
-                                        </div>
-                                        <div class="text-center py-4 p-2">
-                                            <a (click)="redirectToDetalleRepositorio()"><h6 class="text-wrap">NOMBRE DE LA ENTIDAD ALIADA</h6></a>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12 pb-2">
-                                    <div class="team-item bg-white mb-4 conteriner-noticia">
-                                        <div class="team-img position-relative overflow-hidden">
-                                            <img class="img-fluid w-100" src="../../../assets/img/img3.jpg" alt="">
-                                            <div class="team-social">
-
-                                            </div>
-                                        </div>
-                                        <div class="text-center py-4 p-2">
-                                            <a (click)="redirectToDetalleRepositorio()"><h6 class="text-wrap">NOMBRE DE LA ENTIDAD ALIADA</h6></a>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12 pb-2">
-                                    <div class="team-item bg-white mb-4 conteriner-noticia">
-                                        <div class="team-img position-relative overflow-hidden">
-                                            <img class="img-fluid w-100" src="../../../assets/img/img3.jpg" alt="">
-                                            <div class="team-social">
-
-                                            </div>
-                                        </div>
-                                        <div class="text-center py-4 p-2">
-                                            <a (click)="redirectToDetalleRepositorio()"><h6 class="text-wrap">NOMBRE DE LA ENTIDAD ALIADA</h6></a>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12 pb-2">
-                                    <div class="team-item bg-white mb-4 conteriner-noticia">
-                                        <div class="team-img position-relative overflow-hidden">
-                                            <img class="img-fluid w-100" src="../../../assets/img/img3.jpg" alt="">
-                                            <div class="team-social">
-
-                                            </div>
-                                        </div>
-                                        <div class="text-center py-4 p-2">
-                                            <a (click)="redirectToDetalleRepositorio()"><h6 class="text-wrap">NOMBRE DE LA ENTIDAD ALIADA</h6></a>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12 pb-2">
-                                    <div class="team-item bg-white mb-4 conteriner-noticia">
-                                        <div class="team-img position-relative overflow-hidden">
-                                            <img class="img-fluid w-100" src="../../../assets/img/img3.jpg" alt="">
-                                            <div class="team-social">
-
-                                            </div>
-                                        </div>
-                                        <div class="text-center py-4 p-2">
-                                            <a (click)="redirectToDetalleRepositorio()"><h6 class="text-wrap">NOMBRE DE LA ENTIDAD ALIADA</h6></a>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12 pb-2">
-                                    <div class="team-item bg-white mb-4 conteriner-noticia">
-                                        <div class="team-img position-relative overflow-hidden">
-                                            <img class="img-fluid w-100" src="../../../assets/img/img3.jpg" alt="">
-                                            <div class="team-social">
-
-                                            </div>
-                                        </div>
-                                        <div class="text-center py-4 p-2">
-                                            <a (click)="redirectToDetalleRepositorio()"><h6 class="text-wrap">NOMBRE DE LA ENTIDAD ALIADA</h6></a>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12 pb-2">
-                                    <div class="team-item bg-white mb-4 conteriner-noticia">
-                                        <div class="team-img position-relative overflow-hidden">
-                                            <img class="img-fluid w-100" src="../../../assets/img/img3.jpg" alt="">
-                                            <div class="team-social">
-
-                                            </div>
-                                        </div>
-                                        <div class="text-center py-4 p-2">
-                                            <a (click)="redirectToDetalleRepositorio()"><h6 class="text-wrap">NOMBRE DE LA ENTIDAD ALIADA</h6></a>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
 
                             
                             </div>

@@ -48,7 +48,7 @@ export const routes: Routes = [
     //   loadComponent: () => import('./view/detalle-repositorio/detalle-repositorio.component').then((m) => m.DetalleRepositorioComponent),
     // },
     {
-      path: 'detalle-repositorio',
+      path: 'detalle-repositorio/:id',
       loadComponent: () => import('./view/detalle-repositorio/detalle-repositorio.component').then((m) => m.DetalleRepositorioComponent),
     },
     // Rutas para el dashboard

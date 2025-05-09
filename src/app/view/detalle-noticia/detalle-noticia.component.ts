@@ -24,7 +24,7 @@ export class DetalleNoticiaComponent {
  //para el manejo de datos de infografias
   
  infografias: InfografiaI[] = [];  // Cambié 'noticia' a 'noticias', ahora es un arreglo
- infografia: any;  // Cambié 'noticia' a 'noticias', ahora es un arreglo
+ infografia: any;  
  constructor(private route: ActivatedRoute, private router: Router, private api: ApiService) {}
 
 

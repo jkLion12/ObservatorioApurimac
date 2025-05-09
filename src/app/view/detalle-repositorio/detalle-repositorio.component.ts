@@ -14,6 +14,8 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { AliadosComponent } from "../../components/aliados/aliados.component";
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ApiService } from '../../services/api.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -33,8 +35,54 @@ export class DetalleRepositorioComponent {
   @ViewChild(MatSort) sort!: MatSort;
 
   ngOnInit() {
-    // Puedes cargar datos aquí desde un servicio también
+    this.getDetalleRepositoio(this.route.snapshot.paramMap.get('id'));
+    
   }
+
+   constructor(private route: ActivatedRoute, private router: Router, private api: ApiService) {}
+  
+
+  //para traer detalles de repositorio
+  entidad: any;  
+  imagenURL: string | ArrayBuffer | null = null;
+
+  getDetalleRepositoio(id: any) {
+    this.api.getDetalleEntidadAliada(id).subscribe({
+      next: (data: any) => {
+        console.log('Detalles de la entidad:', data);
+  
+        const entidad = data[0];
+        this.entidad = entidad; // Cambié 'noticia' a 'noticias', ahora es un arreglo
+        
+        // Usamos la función getImageUrl para construir la URL correcta
+        this.imagenURL = this.getImageUrlDetalle(entidad.portada);
+      },
+      error: (error) => {
+        console.error('Error al cargar detalles de la entidad:', error);
+      }
+    });
+
+
+  }
+
+  
+
+  getImageUrlDetalle(relativePath: string): string {
+    if (!relativePath) {
+      // Si no hay imagen, devuelve una imagen por defecto
+      return 'assets/img/no-image.jpg';
+    }
+    
+    // Si la ruta ya contiene la URL completa
+    if (relativePath.startsWith('http://') || relativePath.startsWith('https://')) {
+      return relativePath;
+    }
+    
+    // Construir URL completa
+    // IMPORTANTE: Asegúrate de que esta URL sea la correcta para acceder a tus imágenes
+    return `http://localhost:80/API OBSERVATORIO/${relativePath}`;
+  }
+
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
