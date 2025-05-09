@@ -91,5 +91,13 @@ export class MainComponent {
     window.open('/home', '_blank');
 
   }
+  redireccionarEntidadAliada(){
+    window.open('/entidad-aliada');
+
+  }
+  redireccionarCrearEntidadAliada(){
+    window.open('/crear-entidad-aliada');
+
+  }
 
 }

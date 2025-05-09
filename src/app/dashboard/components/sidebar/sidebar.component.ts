@@ -2,10 +2,11 @@ import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { Router } from '@angular/router';
 import {MatIconModule} from '@angular/material/icon';
+import { TopbarComponent } from "../topbar/topbar.component";
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [],
+  imports: [TopbarComponent],
   templateUrl: './sidebar.component.html',
   styleUrl: '../../componentes dashboard/css/sb-admin-2.min.css'
 
